@@ -41,18 +41,17 @@ class App extends ReactComponent {
 class MainView extends View<{}> {
 	@:state var counter:Int = 0;
 	
-	function render() '
+	/*function render() '
 		<ReactNativeView style={Main.styles.container} >
 			<ReactNativeText style={Main.styles.text}>
 				{\'Hello! $counter\'}
 			</ReactNativeText>
 		</ReactNativeView>
-	';
-	/*{
+	';*/
+	function render()
 		return node(ReactNativeView, {style: Main.styles.container} , [
 			node(ReactNativeText, {style: Main.styles.text}, ['Hello! $counter'])
 		]);
-	}*/
 	
 	override function init() {
 		var timer = new haxe.Timer(500);
